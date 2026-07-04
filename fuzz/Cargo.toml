@@ -1,0 +1,55 @@
+
+[package]
+name = "benchlog-fuzz"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+benchlog-core = { path = "../benchlog-core" }
+
+            [[bin]]
+            name = "frame_fuzzer"
+            path = "fuzz_targets/frame_fuzzer.rs"
+            test = false
+            doc = false
+            bench = false
+            
+            [[bin]]
+            name = "channel_fuzzer"
+            path = "fuzz_targets/channel_fuzzer.rs"
+            test = false
+            doc = false
+            bench = false
+            
+            [[bin]]
+            name = "sample_fuzzer"
+            path = "fuzz_targets/sample_fuzzer.rs"
+            test = false
+            doc = false
+            bench = false
+            
+            [[bin]]
+            name = "event_fuzzer"
+            path = "fuzz_targets/event_fuzzer.rs"
+            test = false
+            doc = false
+            bench = false
+            
+            [[bin]]
+            name = "stream_fuzzer"
+            path = "fuzz_targets/stream_fuzzer.rs"
+            test = false
+            doc = false
+            bench = false
+            
+            [[bin]]
+            name = "ingest_fuzzer"
+            path = "fuzz_targets/ingest_fuzzer.rs"
+            test = false
+            doc = false
+            bench = false

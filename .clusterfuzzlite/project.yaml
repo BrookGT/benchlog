@@ -1,0 +1,13 @@
+
+language: rust
+fuzzing_engines:
+  - libfuzzer
+sanitizers:
+  - address
+fuzz_targets:
+  - frame_fuzzer
+  - channel_fuzzer
+  - sample_fuzzer
+  - event_fuzzer
+  - stream_fuzzer
+  - ingest_fuzzer

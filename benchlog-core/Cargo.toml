@@ -1,0 +1,17 @@
+
+[package]
+name = "benchlog-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "BLF bench log format: multi-channel sensor capture streams for lab instruments."
+readme = "../README.md"
+
+[lib]
+name = "benchlog_core"
+path = "src/lib.rs"
+
+[features]
+default = ["std"]
+std = []
